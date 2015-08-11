@@ -23,15 +23,22 @@ namespace Land.Services.Owners
             return this.ownerRepository.GetAll();
         }
 
+        public Owner GetOwner(string id)
+        {
+            return this.ownerRepository.FindById(id);
+        }
+
         public bool CreateOwner(Owner owner)
         {
             this.ownerRepository.Add(owner);
+            this.ownerRepository.SaveChanges();
             return true;
         }
 
         public bool EditOwner(Owner owner)
         {
             this.ownerRepository.Update(owner);
+            this.ownerRepository.SaveChanges();
             return true;
         }
     }

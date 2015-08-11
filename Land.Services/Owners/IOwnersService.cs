@@ -8,5 +8,7 @@ namespace Land.Services.Owners
         bool CreateOwner(Land.Data.Entities.Owner owner);
         bool EditOwner(Land.Data.Entities.Owner owner);
         List<Owner> GetOwners();
+
+        Owner GetOwner(string id);
     }
 }

@@ -17,6 +17,7 @@ namespace Land.Data.Repositories
         public Repository()
         {
             this.context = new LandContext();
+            this.context.Configuration.ProxyCreationEnabled = false;
         }
 
         protected DbSet<TEntity> Set
@@ -76,6 +77,11 @@ namespace Land.Data.Repositories
         public void Remove(TEntity entity)
         {
             Set.Remove(entity);
+        }
+
+        public void SaveChanges()
+        {
+            this.context.SaveChanges();
         }
     }
 }

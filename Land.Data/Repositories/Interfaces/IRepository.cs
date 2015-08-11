@@ -20,5 +20,7 @@ namespace Land.Data.Repositories.Interfaces
         void Add(TEntity entity);
         void Update(TEntity entity);
         void Remove(TEntity entity);
+
+        void SaveChanges();
     }
 }

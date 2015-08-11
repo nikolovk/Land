@@ -39,7 +39,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LandProperties\ILandPropertiesService.cs" />
     <Compile Include="LandProperties\LandPropertiesService.cs" />
+    <Compile Include="Mortages\IMortagesService.cs" />
     <Compile Include="Mortages\MortagesService.cs" />
     <Compile Include="Owners\IOwnersService.cs" />
     <Compile Include="Owners\OwnersService.cs" />

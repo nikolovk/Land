@@ -13,7 +13,7 @@ namespace Land.Data.Entities
             Owners = new HashSet<Owner>();
         }
 
-        public int MortageID { get; set; }
+        public int? MortageID { get; set; }
 
         [Key]
         [StringLength(50)]

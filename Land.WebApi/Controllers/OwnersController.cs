@@ -26,19 +26,24 @@ namespace Land.WebApi.Controllers
         }
 
         // GET: api/Owners/5
-        public string Get(int id)
+        public IHttpActionResult Get(string id)
         {
-            return "value";
+            Owner owner = this.ownersService.GetOwner(id);
+            return Ok(owner);
         }
 
         // POST: api/Owners
-        public void Post([FromBody]string value)
+        public IHttpActionResult Post(Owner owner)
         {
+            bool result = this.ownersService.CreateOwner(owner);
+            return Ok(result);
         }
 
         // PUT: api/Owners/5
-        public void Put(int id, [FromBody]string value)
+        public IHttpActionResult Put(Owner owner)
         {
+            bool result = this.ownersService.EditOwner(owner);
+            return Ok(result);
         }
 
         // DELETE: api/Owners/5
