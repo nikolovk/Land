@@ -6,9 +6,15 @@ using System.Web.Mvc;
 
 namespace Land.MVC.SPA.Controllers
 {
-    public class HomeController : Controller
+    public class TemplatesController : Controller
     {
+        // GET: Templates
         public ActionResult Index()
+        {
+            return View();
+        }
+
+        public ActionResult Owners()
         {
             return View();
         }
