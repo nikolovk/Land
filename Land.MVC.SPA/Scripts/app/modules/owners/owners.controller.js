@@ -6,6 +6,7 @@
 
     OwnersController.$inject = ['$modal', 'OwnersService'];
     function OwnersController($modal, ownersService) {
+        //TODO load data on route resolve
         var vm = this;
         ownersService.getOwners()
         .then(function (owners) {
