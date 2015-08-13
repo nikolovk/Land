@@ -25,17 +25,25 @@ namespace Land.MVC.SPA
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/angular-toastr.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/angular-vendor").Include(
                       "~/Scripts/angular.js",
-                      "~/Scripts/angular-route.js"));
+                      "~/Scripts/angular-route.js",
+                      "~/Scripts/angular-ui/ui.bootstrap.js",
+                      "~/Scripts/angular-ui/ui.bootstrap-tpls.js",
+                      "~/Scripts/angular-toastr.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/app-modules").IncludeDirectory(
                 "~/Scripts/app","*.module.js",true));
+
             bundles.Add(new ScriptBundle("~/bundles/app-services").IncludeDirectory(
                 "~/Scripts/app", "*service.js", true));
+
             bundles.Add(new ScriptBundle("~/bundles/app-controllers").IncludeDirectory(
                 "~/Scripts/app", "*controller.js", true));
+
             bundles.Add(new ScriptBundle("~/bundles/app-routes").IncludeDirectory(
     "~/Scripts/app", "*routes.js", true));
         }

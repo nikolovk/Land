@@ -18,5 +18,10 @@ namespace Land.MVC.SPA.Controllers
         {
             return View();
         }
+
+        public ActionResult OwnersModal()
+        {
+            return View();
+        }
     }
 }

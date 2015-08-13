@@ -1,0 +1,24 @@
+﻿<div>
+    <h2>Edit/Create</h2>
+    <form>
+        <p>
+            <label for="ownerID">OwnerID</label>
+            <input type="text" id="ownerID" name="ownerID" ng-model="vm.owner.ownerID" />
+        </p>
+        <p>
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" ng-model="vm.owner.firstName" />
+        </p>
+        <p>
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" ng-model="vm.owner.lastName" />
+        </p>
+        <p>
+            <label for="address">address</label>
+            <input type="text" id="address" name="address" ng-model="vm.owner.address" />
+        </p>
+        <p>
+            <button type="button" ng-click="vm.save()">Save</button>
+        </p>
+    </form>
+</div>

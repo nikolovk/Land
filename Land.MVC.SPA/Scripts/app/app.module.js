@@ -4,7 +4,8 @@
 	angular.module('app', [
         'ngRoute',
         'app.services',
-        'app.modules'
+        'app.modules',
+        'toastr'
 	]);
 
 })();

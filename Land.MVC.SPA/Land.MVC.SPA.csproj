@@ -121,6 +121,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\ui-bootstrap-csp.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -146,8 +147,13 @@
     <Content Include="Scripts\angular-sanitize.js" />
     <Content Include="Scripts\angular-sanitize.min.js" />
     <Content Include="Scripts\angular-scenario.js" />
+    <Content Include="Scripts\angular-toastr.js" />
     <Content Include="Scripts\angular-touch.js" />
     <Content Include="Scripts\angular-touch.min.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.min.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\app\modules\land-properties\land-properties.module.js" />
@@ -155,8 +161,12 @@
     <Content Include="Scripts\app\modules\modules.routes.js" />
     <Content Include="Scripts\app\modules\mortages\mortages.module.js" />
     <Content Include="Scripts\app\modules\owners\owners.controller.js" />
+    <Content Include="Scripts\app\modules\owners\owners.modal.controller.js" />
     <Content Include="Scripts\app\modules\owners\owners.module.js" />
     <Content Include="Scripts\app\main.controller.js" />
+    <Content Include="Scripts\app\services\exception-handler.services.js" />
+    <Content Include="Scripts\app\services\exception.service.js" />
+    <Content Include="Scripts\app\services\logger.service.js" />
     <Content Include="Scripts\app\services\owners.service.js" />
     <Content Include="Scripts\app\services\services.module.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -904,6 +914,9 @@
     <Content Include="Scripts\i18n\angular-locale_zh.js" />
     <Content Include="Scripts\i18n\angular-locale_zu-za.js" />
     <Content Include="Scripts\i18n\angular-locale_zu.js" />
+    <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.4.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
@@ -920,6 +933,8 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Scripts\jquery-2.1.4.min.map" />
+    <Content Include="Views\Templates\OwnersModal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

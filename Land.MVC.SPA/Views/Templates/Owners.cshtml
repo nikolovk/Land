@@ -1,0 +1,26 @@
+﻿@{
+    Layout = "";
+}
+<div>
+    <h2>Owners</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>OwnerID{{vm.test}}</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Address</th>
+                <th>Action</th>
+            </tr>
+            <tr ng-repeat="owner in vm.owners">
+                <td>{{owner.ownerID}}</td>
+                <td>{{owner.firstName}}</td>
+                <td>{{owner.lastName}}</td>
+                <td>{{owner.address}}</td>
+                <td><a ng-click="vm.edit(owner)">Edit</a></td>
+            </tr>
+        </thead>
+    </table>
+</div>
+
