@@ -31,7 +31,8 @@
                 resolve: {
                         mortage: function () {
                             return mortage;
-                        }
+                        },
+                        landProperties:vm.landProperties
                     }
             }).result.then(function (){
                         mortagesService.getMortages()
