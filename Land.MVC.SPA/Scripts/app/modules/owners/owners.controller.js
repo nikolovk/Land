@@ -27,12 +27,12 @@
                             return owner;
                         }
                     }
-            }).result.then(
+            }).result.then(function (){
                         ownersService.getOwners()
                       .then(function (owners) {
                          vm.owners = owners;
                     });
-                );
+                });
         }
     }
 })();
