@@ -5,7 +5,9 @@
         'ngRoute',
         'app.services',
         'app.modules',
-        'toastr'
+        'toastr',
+        'ui.bootstrap',
+        'flow'
 	]);
 
 })();

@@ -3,7 +3,7 @@ using Autofac.Integration.WebApi;
 using Land.Data.Repositories;
 using Land.Data.Repositories.Interfaces;
 using Land.Services.LandProperties;
-using Land.Services.Mortages;
+using Land.Services.Mortgages;
 using Land.Services.Owners;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
@@ -41,8 +41,8 @@ namespace Land.WebApi
             builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
             builder.RegisterType<OwnersService>().As<IOwnersService>();
             builder.RegisterType<OwnerRepository>().As<IOwnerRepository>();
-            builder.RegisterType<MortagesService>().As<IMortagesService>();
-            builder.RegisterType<MortageRepository>().As<IMortageRepository>();
+            builder.RegisterType<MortgagesService>().As<IMortgagesService>();
+            builder.RegisterType<mortgageRepository>().As<ImortgageRepository>();
             builder.RegisterType<LandPropertiesService>().As<ILandPropertiesService>();
             builder.RegisterType<LandPropertyRepository>().As<ILandPropertyRepository>();
 

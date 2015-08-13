@@ -4,20 +4,22 @@
     angular.module('app.modules.owners')
     .controller('OwnersModalController', OwnersModalController);
 
-    OwnersModalController.$inject = ['$modalInstance', 'OwnersService', 'owners'];
-    function OwnersModalController($modalInstance, ownersService, owners) {
+    OwnersModalController.$inject = ['$modalInstance', 'OwnersService', 'owner'];
+    function OwnersModalController($modalInstance, ownersService, owner) {
         var vm = this;
-        vm.owners = owners;
+        vm.owner = owner;
+        vm.save = save;
+        vm.cancel = cancel;
         
-        function save(){
-            if(owner.isNew){
-                ownersService.createOwner(owner)
+        function save() {
+            if (vm.owner.isNew) {
+                ownersService.createOwner(vm.owner)
                 .then(function (){
                     $modalInstance.close();
                 
                     });
            } else {
-                ownersService.updateOwner(owner)
+                ownersService.updateOwner(vm.owner)
                 .then(function (){
                     $modalInstance.close();
                 

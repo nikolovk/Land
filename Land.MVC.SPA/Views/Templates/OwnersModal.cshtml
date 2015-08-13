@@ -1,9 +1,13 @@
-﻿<div>
+﻿@{
+    Layout = "";
+}
+<div>
     <h2>Edit/Create</h2>
+
     <form>
         <p>
             <label for="ownerID">OwnerID</label>
-            <input type="text" id="ownerID" name="ownerID" ng-model="vm.owner.ownerID" />
+            <input type="text" id="ownerID" name="ownerID" ng-model="vm.owner.ownerID" ng-disabled="!vm.owner.isNew" />
         </p>
         <p>
             <label for="firstName">First Name</label>
@@ -17,9 +21,20 @@
             <label for="address">address</label>
             <input type="text" id="address" name="address" ng-model="vm.owner.address" />
         </p>
+        <div flow-init="{target: '/image/upload', testChunks:false}"
+             flow-files-submitted="$flow.upload()"
+             flow-file-success="vm.owner.picture = $flow.files[0].name">
+
+            <input type="file" flow-btn />
+            Picture
+            <span class="btn" flow-btn>Upload File</span>
+
+                    <span ng-if="vm.owner.picture"><img src="/images/{{vm.owner.picture}}" width="100" height="100" /></span>
+
+        </div>
         <p>
             <button type="button" ng-click="vm.save()">Save</button>
-            <button type="button" ng-click="vm.cancel()">Save</button>
+            <button type="button" ng-click="vm.cancel()">Close</button>
         </p>
     </form>
 </div>

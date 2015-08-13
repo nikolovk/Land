@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Land.Data.Repositories.Interfaces
 {
-    public interface IMortageRepository:IRepository<Mortage>
+    public interface ImortgageRepository:IRepository<Mortgage>
     {
     }
 }

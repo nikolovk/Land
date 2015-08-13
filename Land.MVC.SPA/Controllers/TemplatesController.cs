@@ -23,5 +23,25 @@ namespace Land.MVC.SPA.Controllers
         {
             return View();
         }
+
+        public ActionResult Mortgages()
+        {
+            return View();
+        }
+
+        public ActionResult MortgagesModal()
+        {
+            return View();
+        }
+
+        public ActionResult LandProperties()
+        {
+            return View();
+        }
+
+        public ActionResult LandPropertiesModal()
+        {
+            return View();
+        }
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Land.Data.Repositories
 {
-    public class MortageRepository : Repository<Mortage>, IMortageRepository
+    public class mortgageRepository : Repository<Mortgage>, ImortgageRepository
     {
     }
 }

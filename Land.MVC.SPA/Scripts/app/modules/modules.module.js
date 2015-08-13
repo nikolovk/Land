@@ -3,7 +3,7 @@
 
     angular.module('app.modules', [
         'app.modules.land-properties',
-        'app.modules.mortages',
+        'app.modules.mortgages',
         'app.modules.owners'
     ]);
 

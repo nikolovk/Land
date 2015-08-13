@@ -11,6 +11,17 @@
             templateUrl: '/templates/owners',
             controller: 'OwnersController',
             controllerAs: 'vm',
-        });
+        })
+        .when('/mortgages', {
+            templateUrl: '/templates/mortgages',
+            controller: 'mortgagesController',
+            controllerAs: 'vm',
+        })
+        .when('/landProperties', {
+            templateUrl: '/templates/landProperties',
+            controller: 'LandPropertiesController',
+            controllerAs: 'vm',
+        })
+        ;
     }
 })();

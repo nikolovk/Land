@@ -31,9 +31,10 @@ namespace Land.MVC.SPA
             bundles.Add(new ScriptBundle("~/bundles/angular-vendor").Include(
                       "~/Scripts/angular.js",
                       "~/Scripts/angular-route.js",
-                      "~/Scripts/angular-ui/ui.bootstrap.js",
-                      "~/Scripts/angular-ui/ui.bootstrap-tpls.js",
-                      "~/Scripts/angular-toastr.js"));
+                      "~/Scripts/angular-ui/ui-bootstrap.js",
+                      "~/Scripts/angular-ui/ui-bootstrap-tpls.js",
+                      "~/Scripts/angular-toastr.js",
+                      "~/Scripts/ng-flow-standalone.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/app-modules").IncludeDirectory(
                 "~/Scripts/app","*.module.js",true));

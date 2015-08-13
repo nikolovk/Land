@@ -1,0 +1,20 @@
+﻿@{
+    Layout = "";
+}
+<div>
+    <h2>Edit/Create</h2>
+    <form>
+        <p>
+            <label for="upi">UPI</label>
+            <input type="text" id="upi" name="upi" ng-model="vm.landProperty.upi" disabled />
+        </p>
+        <p>
+            <label for="area">Area</label>
+            <input type="text" id="area" name="area" ng-model="vm.landProperty.area" />
+        </p>
+        <p>
+            <button type="button" ng-click="vm.save()">Save</button>
+            <button type="button" ng-click="vm.cancel()">Close</button>
+        </p>
+    </form>
+</div>

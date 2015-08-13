@@ -1,0 +1,24 @@
+﻿@{
+    Layout = "";
+}
+<div>
+    <h2>Edit/Create Mortages</h2>
+    <form>
+        <p>
+            <label for="upi">UPI</label>
+            <input type="text" id="upi" name="upi" ng-model="vm.mortgage.upi" disabled />
+        </p>
+        <p>
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" ng-model="vm.mortgage.date" />
+        </p>
+        <p>
+            <label for="amount">Amount</label>
+            <input type="text" id="amount" name="amount" ng-model="vm.mortgage.amount" />
+        </p>
+        <p>
+            <button type="button" ng-click="vm.save()">Save</button>
+            <button type="button" ng-click="vm.cancel()">Close</button>
+        </p>
+    </form>
+</div>

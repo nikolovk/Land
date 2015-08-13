@@ -2,22 +2,22 @@
     'use strict';
 
     angular.module('app.services')
-    .factory('MortagesService', MortagesService);
+    .factory('mortgagesService', mortgagesService);
 
-    MortagesService.$inject = ['$http', 'exception', 'logger'];
+    mortgagesService.$inject = ['$http', 'exception', 'logger'];
 
-    function MortagesService($http, exception, logger) {
+    function mortgagesService($http, exception, logger) {
         var service = {
-            getMortages:getMortages,
-            createMortage:createMortage,
-            updateMortage:updateMortage
+            getMortgages:getMortgages,
+            createMortgage: createMortgage,
+            updateMortgage: updateMortgage
         };
         return service;
 
         ///////////////
 
-        function getMortages(){
-            return $http.get('http://localhost:9999/api/mortages')
+        function getMortgages() {
+            return $http.get('http://localhost:9999/api/mortgages')
             .then(function (response) {
                 return response.data;
             })
@@ -26,8 +26,8 @@
             });
         }
         
-        function createMortage(mortage){
-            return $http.post('http://localhost:9999/api/mortages',mortage)
+        function createMortgage(mortgage){
+            return $http.post('http://localhost:9999/api/mortgages',mortgage)
             .then(function (response) {
                 return response.data;
             })
@@ -36,8 +36,8 @@
             });
         }
         
-        function updateMortage(mortage){
-            return $http.put('http://localhost:9999/api/mortages',mortage)
+        function updateMortgage(mortgage){
+            return $http.put('http://localhost:9999/api/mortgages',mortgage)
             .then(function (response) {
                 return response.data;
             })

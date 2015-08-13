@@ -13,8 +13,6 @@ namespace Land.Data.Entities
             Owners = new HashSet<Owner>();
         }
 
-        public int? MortageID { get; set; }
-
         [Key]
         [StringLength(50)]
         public string UPI { get; set; }
@@ -24,7 +22,7 @@ namespace Land.Data.Entities
         [StringLength(50)]
         public string Picture { get; set; }
 
-        public virtual Mortage Mortage { get; set; }
+        public virtual Mortgage Mortgage { get; set; }
 
         public virtual ICollection<Owner> Owners { get; set; }
     }

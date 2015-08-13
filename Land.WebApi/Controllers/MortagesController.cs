@@ -10,52 +10,52 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using Land.Data.Entities;
 using Land.Data.Repositories;
-using Land.Services.Mortages;
+using Land.Services.Mortgages;
 
 namespace Land.WebApi.Controllers
 {
-    public class MortagesController : ApiController
+    public class mortgagesController : ApiController
     {
-        private IMortagesService mortagesService;
+        private IMortgagesService mortgagesService;
 
-        public MortagesController(IMortagesService mortagesService)
+        public mortgagesController(IMortgagesService mortgagesService)
         {
-            this.mortagesService = mortagesService;
+            this.mortgagesService = mortgagesService;
         }
 
-        // GET: api/Mortages
+        // GET: api/mortgages
         public IHttpActionResult Get()
         {
-            List<Mortage> mortages = this.mortagesService.GetMortages();
-            return Ok(mortages);
+            List<Mortgage> mortgages = this.mortgagesService.GetMortgages();
+            return Ok(mortgages);
         }
 
-        // GET: api/Mortages/5
-        [ResponseType(typeof(Mortage))]
+        // GET: api/mortgages/5
+        [ResponseType(typeof(Mortgage))]
         public IHttpActionResult Get(int id)
         {
-            Mortage mortage = this.mortagesService.GetMortage(id);
-            if (mortage == null)
+            Mortgage mortgage = this.mortgagesService.GetMortgage(id);
+            if (mortgage == null)
             {
                 return NotFound();
             }
 
-            return Ok(mortage);
+            return Ok(mortgage);
         }
 
-        // PUT: api/Mortages/5
+        // PUT: api/mortgages/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutMortage(Mortage mortage)
+        public IHttpActionResult Putmortgage(Mortgage mortgage)
         {
-            bool result = this.mortagesService.EditMortage(mortage);
+            bool result = this.mortgagesService.EditMortgage(mortgage);
             return Ok(result);
         }
 
-        // POST: api/Mortages
-        [ResponseType(typeof(Mortage))]
-        public IHttpActionResult PostMortage(Mortage mortage)
+        // POST: api/mortgages
+        [ResponseType(typeof(Mortgage))]
+        public IHttpActionResult Postmortgage(Mortgage mortgage)
         {
-            int result = this.mortagesService.CreateMortage(mortage);
+            string result = this.mortgagesService.CreateMortgage(mortgage);
             return Ok(result);
         }
     }

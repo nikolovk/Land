@@ -3,22 +3,24 @@
 }
 <div>
     <h2>Owners</h2>
-
+    <a href="" ng-click="vm.modalOpen(owner,true)">Add Owner</a>
     <table>
         <thead>
             <tr>
-                <th>OwnerID{{vm.test}}</th>
+                <th>OwnerID</th>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Address</th>
+                <th>Picture</th>
                 <th>Action</th>
             </tr>
             <tr ng-repeat="owner in vm.owners">
-                <td>{{owner.ownerID}}</td>
-                <td>{{owner.firstName}}</td>
-                <td>{{owner.lastName}}</td>
-                <td>{{owner.address}}</td>
-                <td><a ng-click="vm.edit(owner)">Edit</a></td>
+                <td>{{::owner.ownerID}}</td>
+                <td>{{::owner.firstName}}</td>
+                <td>{{::owner.lastName}}</td>
+                <td>{{::owner.address}}</td>
+                <td><span ng-if="owner.picture"><img src="/images/{{owner.picture}}" width="100" height="100" /></span></td>
+                <td><a href="" ng-click="vm.modalOpen(owner)">Edit</a></td>
             </tr>
         </thead>
     </table>

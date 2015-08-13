@@ -41,8 +41,8 @@
   <ItemGroup>
     <Compile Include="LandProperties\ILandPropertiesService.cs" />
     <Compile Include="LandProperties\LandPropertiesService.cs" />
-    <Compile Include="Mortages\IMortagesService.cs" />
-    <Compile Include="Mortages\MortagesService.cs" />
+    <Compile Include="Mortgages\IMortgagesService.cs" />
+    <Compile Include="Mortgages\MortgagesService.cs" />
     <Compile Include="Owners\IOwnersService.cs" />
     <Compile Include="Owners\OwnersService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

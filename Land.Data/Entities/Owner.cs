@@ -28,7 +28,6 @@ namespace Land.Data.Entities
         [StringLength(50)]
         public string Address { get; set; }
 
-        [Required]
         [StringLength(50)]
         public string Picture { get; set; }
 

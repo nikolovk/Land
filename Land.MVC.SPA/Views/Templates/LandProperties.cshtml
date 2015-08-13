@@ -1,0 +1,28 @@
+﻿@{
+    Layout = "";
+}
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>UPI</th>
+                <th>Area</th>
+                <th>Mortages Date</th>
+                <th>Mortages Amount</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="landProperty in vm.landProperties">
+                <td>{{::landProperty.upi}}</td>
+                <td>{{::landProperty.area}}</td>
+                <td>{{vm.mortagesDictionary[landProperty.upi].date}}</td>
+                <td>{{::vm.mortagesDictionary[landProperty.upi].amount}}</td>
+                <td>
+                    <a href="" ng-click="vm.openMortageModal(vm.mortagesDictionary[landProperty.upi],!vm.mortagesDictionary[landProperty.upi],landProperty.upi)">Edit/Add Mortage</a> | 
+                    <a href="" ng-click="vm.openModal(landProperty)">Edit Property</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

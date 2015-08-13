@@ -112,6 +112,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ImageController.cs" />
+    <Compile Include="Controllers\MultipartMemoryStreamProvider.cs" />
     <Compile Include="Controllers\TemplatesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -157,16 +159,22 @@
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\app\modules\land-properties\land-properties.module.js" />
+    <Content Include="Scripts\app\modules\land-properties\land-properties.controller.js" />
+    <Content Include="Scripts\app\modules\land-properties\land-property.modal.controller.js" />
     <Content Include="Scripts\app\modules\modules.module.js" />
     <Content Include="Scripts\app\modules\modules.routes.js" />
-    <Content Include="Scripts\app\modules\mortages\mortages.module.js" />
+    <Content Include="Scripts\app\modules\mortgages\mortgages.controller.js" />
+    <Content Include="Scripts\app\modules\mortgages\mortgages.modal.controller.js" />
+    <Content Include="Scripts\app\modules\mortgages\mortgages.module.js" />
     <Content Include="Scripts\app\modules\owners\owners.controller.js" />
     <Content Include="Scripts\app\modules\owners\owners.modal.controller.js" />
     <Content Include="Scripts\app\modules\owners\owners.module.js" />
     <Content Include="Scripts\app\main.controller.js" />
     <Content Include="Scripts\app\services\exception-handler.services.js" />
     <Content Include="Scripts\app\services\exception.service.js" />
+    <Content Include="Scripts\app\services\land-properties.service.js" />
     <Content Include="Scripts\app\services\logger.service.js" />
+    <Content Include="Scripts\app\services\mortgages.service.js" />
     <Content Include="Scripts\app\services\owners.service.js" />
     <Content Include="Scripts\app\services\services.module.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -918,6 +926,8 @@
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\ng-flow-standalone.js" />
+    <Content Include="Scripts\ng-flow-standalone.min.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
@@ -935,10 +945,15 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />
     <Content Include="Views\Templates\OwnersModal.cshtml" />
+    <Content Include="Views\Templates\Mortgages.cshtml" />
+    <Content Include="Views\Templates\LandProperties.cshtml" />
+    <Content Include="Views\Templates\LandPropertiesModal.cshtml" />
+    <Content Include="Views\Templates\MortgagesModal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Image\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
