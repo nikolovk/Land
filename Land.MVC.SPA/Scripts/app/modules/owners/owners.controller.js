@@ -4,12 +4,35 @@
     angular.module('app.modules.owners')
     .controller('OwnersController', OwnersController);
 
-    OwnersController.$inject = ['OwnersService'];
-    function OwnersController(ownersService) {
+    OwnersController.$inject = ['$modal', 'OwnersService'];
+    function OwnersController($modal, ownersService) {
         var vm = this;
         ownersService.getOwners()
         .then(function (owners) {
             vm.owners = owners;
         });
+        
+        //////////////////
+        
+        modalOpen(owner,isNew){
+            owner = owner||{};
+            owner.isNew = isNew;
+            $modal.open({
+                templateUrl:'/templates/OwnersModal',
+                controller: 'OwnersModalController',
+                controllerAs: 'vm',
+                backdropClass: 'backdrop-fixed',
+                resolve: {
+                        owner: function () {
+                            return owner;
+                        }
+                    }
+            }).result.then(
+                        ownersService.getOwners()
+                      .then(function (owners) {
+                         vm.owners = owners;
+                    });
+                );
+        }
     }
 })();
