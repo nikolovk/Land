@@ -7,7 +7,7 @@
     OwnersModalController.$inject = ['$modalInstance', 'OwnersService', 'data'];
     function OwnersModalController($modalInstance, ownersService, data) {
         var vm = this;
-        function ok (){
+        function save(){
             $modalInstance.close();
         }
 
