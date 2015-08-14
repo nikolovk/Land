@@ -13,6 +13,12 @@
             <input type="text" id="area" name="area" ng-model="vm.landProperty.area" />
         </p>
         <p>
+            <label for="owner">Owners</label>
+            <select multiple ng-model="vm.landProperty.owners">
+                <option ng-repeat="owner in vm.ownersDictionary" value="{{owner.ownerID}}">{{owner.firstName}}</option>
+            </select>
+        </p>
+        <p>
             <button type="button" ng-click="vm.save()">Save</button>
             <button type="button" ng-click="vm.cancel()">Close</button>
         </p>

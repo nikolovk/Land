@@ -4,8 +4,8 @@
     angular.module('app.modules.mortgages')
     .controller('LandPropertiesController', LandPropertiesController);
 
-    LandPropertiesController.$inject = ['$modal', 'LandPropertiesService', 'mortgagesService'];
-    function LandPropertiesController($modal, landPropertiesService, mortgagesService) {
+    LandPropertiesController.$inject = ['$modal', 'LandPropertiesService', 'mortgagesService', 'OwnersService'];
+    function LandPropertiesController($modal, landPropertiesService, mortgagesService, ownersService) {
         //TODO load data on route resolve
         var vm = this;
         vm.openModal = openModal;
@@ -15,6 +15,7 @@
             vm.landProperties = landProperties;
         });
         loadMortages();
+        loadOwners();
 
         //////////////////
 
@@ -29,6 +30,9 @@
                 resolve: {
                     landProperty: function () {
                         return landProperty;
+                    },
+                    ownersDictionary: function () {
+                        return vm.ownersDictionary;
                     }
                 }
             }).result.then(function () {
@@ -68,6 +72,17 @@
                     vm.mortagesDictionary[mortgages[i].upi] = mortgages[i];
                 }
             });
+        }
+
+        function loadOwners() {
+            ownersService.getOwners()
+                        .then(function (owners) {
+                            vm.owners = owners;
+                            vm.ownersDictionary = {};
+                            for (var i = 0; i < owners.length; i++) {
+                                vm.ownersDictionary[owners[i].ownerID] = owners[i];
+                            }
+                        });
         }
     }
 })();

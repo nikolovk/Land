@@ -4,10 +4,11 @@
     angular.module('app.modules.owners')
     .controller('LandPropertyModalController', LandPropertyModalController);
 
-    LandPropertyModalController.$inject = ['$modalInstance', 'LandPropertiesService', 'landProperty'];
-    function LandPropertyModalController($modalInstance, landPropertiesService, landProperty) {
+    LandPropertyModalController.$inject = ['$modalInstance', 'LandPropertiesService', 'landProperty','ownersDictionary'];
+    function LandPropertyModalController($modalInstance, landPropertiesService, landProperty, ownersDictionary) {
         var vm = this;
         vm.landProperty = landProperty;
+        vm.ownersDictionary = ownersDictionary;
         vm.save = save;
         vm.cancel = cancel;
 
